@@ -1,0 +1,13 @@
+- name: 
+  hosts:
+    - Controleur
+  serial: 1
+  tasks:
+    - name: Restart serivce httpd
+      systemd:
+        state: restarted
+        name: httpd
+    - name: Restart memcached httpd
+      systemd:
+        state: restarted
+        name: memcached
