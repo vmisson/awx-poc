@@ -1,0 +1,9 @@
+- name: 
+  hosts:
+    - Compute
+  serial: 1
+  tasks:
+    - name: Restart serivce OpenStack Nova Compute
+      systemd:
+        state: restarted
+        name: openstack-nova-compute
