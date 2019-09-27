@@ -1,0 +1,17 @@
+- name: 
+  hosts:
+    - Controleur
+  serial: 1
+  tasks:
+    - name: Restart serivce octavia-health-manager
+      systemd:
+        state: restarted
+        name: octavia-health-manager
+    - name: Restart service octavia-housekeeping
+      systemd:
+        state: restarted
+        name: octavia-housekeeping
+    - name: Restart service octavia-worker
+      systemd:
+        state: restarted
+        name: octavia-worker
