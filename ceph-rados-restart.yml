@@ -1,0 +1,9 @@
+- name: 
+  hosts:
+    - Controleur
+  serial: 1
+  tasks:
+    - name: Restart serivce Ceph RadosGW
+      systemd:
+        state: restarted
+        name: ceph-radosgw.target
