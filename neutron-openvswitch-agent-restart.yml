@@ -1,0 +1,9 @@
+- name: 
+  hosts:
+    - Compute
+  serial: 1
+  tasks:
+    - name: Restart serivce OpenStack Neutron OVS Agent
+      systemd:
+        state: restarted
+        name: neutron-openvswitch-agent
